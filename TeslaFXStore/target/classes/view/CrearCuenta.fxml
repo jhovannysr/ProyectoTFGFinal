@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane fx:id="mainPane" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: white;" stylesheets="@../styles/stylesCrearCuenta.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CrearCuentaController">
+    
+    <children>
+        <AnchorPane onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" prefHeight="72.0" prefWidth="1200.0" styleClass="menuPane" stylesheets="@../styles/stylesCrearCuenta.css">
+            <children>
+                <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="42.0" layoutY="15.0" onMouseClicked="#abrirHomeSinSesion" pickOnBounds="true" preserveRatio="true" styleClass="imgLogo">
+                    <image>
+                        <Image url="@../images/TeslaLogoMain.png" />
+                    </image>
+                </ImageView>
+                <ImageView id="img_minimizarVentana" fitHeight="27.0" fitWidth="25.0" layoutX="1105.0" layoutY="24.0" onMouseClicked="#minimiarVentana" pickOnBounds="true" preserveRatio="true" styleClass="imgMinimizar">
+                    <image>
+                        <Image url="@../icons/minimizar.png" />
+                    </image>
+                </ImageView>
+                <ImageView id="img_cerrarVentana" fitHeight="27.0" fitWidth="25.0" layoutX="1144.0" layoutY="24.0" onMouseClicked="#cerrarVentana" pickOnBounds="true" preserveRatio="true" styleClass="imgCerrar">
+                    <image>
+                        <Image url="@../icons/cerrar.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <Label layoutX="446.0" layoutY="101.0" style="-fx-font-weight: bold;" text="Crear Cuenta">
+            <font>
+                <Font size="28.0" />
+            </font>
+        </Label>
+      <Label layoutX="446.0" layoutY="160.0" style="-fx-font-weight: bold;" text="Nombre" textFill="#6e6e6e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="446.0" layoutY="235.0" style="-fx-font-weight: bold;" text="País" textFill="#6e6e6e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="446.0" layoutY="310.0" style="-fx-font-weight: bold;" text="Edad" textFill="#6e6e6e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+        <Label layoutX="446.0" layoutY="385.0" style="-fx-font-weight: bold;" text="Correo electrónico" textFill="#6e6e6e">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="446.0" layoutY="460.0" style="-fx-font-weight: bold;" text="Contraseña" textFill="#6e6e6e">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+      <TextField fx:id="textfield_campoNombre" focusTraversable="false" layoutX="446.0" layoutY="185.0" prefHeight="40.0" prefWidth="308.0" styleClass="campoDeTexto" stylesheets="@../styles/stylesCrearCuenta.css" />
+      <TextField fx:id="textfield_campoPais" focusTraversable="false" layoutX="446.0" layoutY="260.0" prefHeight="40.0" prefWidth="308.0" styleClass="campoDeTexto" stylesheets="@../styles/stylesCrearCuenta.css" />
+      <TextField fx:id="textfield_campoEdad" focusTraversable="false" layoutX="446.0" layoutY="335.0" prefHeight="40.0" prefWidth="308.0" styleClass="campoDeTexto" stylesheets="@../styles/stylesCrearCuenta.css" />
+        <TextField fx:id="textfield_campoCorreo" focusTraversable="false" layoutX="446.0" layoutY="410.0" prefHeight="40.0" prefWidth="308.0" styleClass="campoDeTexto" stylesheets="@../styles/stylesCrearCuenta.css" />
+        <TextField fx:id="textfield_campoPassword" focusTraversable="false" layoutX="446.0" layoutY="485.0" prefHeight="40.0" prefWidth="308.0" styleClass="campoDeTexto" stylesheets="@../styles/stylesCrearCuenta.css" />
+        <Button id="btn_Siguiente" layoutX="446.0" layoutY="542.0" mnemonicParsing="false" onMouseClicked="#abrirHomeConSesion" prefHeight="40.0" prefWidth="308.0" styleClass="btnSiguiente" stylesheets="@../styles/stylesCrearCuenta.css" text="Siguiente" />
+        <Label fx:id="label_edadIncorrecta" layoutX="603.0" layoutY="319.0" prefHeight="18.0" prefWidth="150.0" text="Formato de edad incorrecto" textAlignment="RIGHT" textFill="RED" visible="false" />
+        <Label fx:id="label_camposVacios" layoutX="446.0" layoutY="525.0" text="Rellena los campos" textFill="RED" visible="false" />
+        <ImageView fitHeight="82.0" fitWidth="35.0" layoutX="72.0" layoutY="653.0" onMouseClicked="#abrirHomeSinSesion" pickOnBounds="true" preserveRatio="true" styleClass="imgLogo">
+            <image>
+                <Image url="@../icons/volver.png" />
+            </image>
+        </ImageView>
+      <TextFlow layoutX="449.0" layoutY="597.0" prefHeight="25.0" prefWidth="302.0" styleClass="labelEnlace" stylesheets="@../styles/stylesCrearCuenta.css">
+         <children>
+            <Text fill="#302f2f" onMouseClicked="#webAvisoDePrivacidad" strokeType="OUTSIDE" strokeWidth="0.0" text="Al continuar, entiendo y acepto el Aviso de privacidad y los Términos de uso de Tesla para crear una cuenta Tesla" textAlignment="CENTER" wrappingWidth="290.28558349609375" />
+         </children>
+      </TextFlow>
+    </children>
+</AnchorPane>

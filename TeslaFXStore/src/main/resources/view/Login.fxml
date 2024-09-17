@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" onMouseClicked="#desactivarFocusField" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: white;" stylesheets="@../styles/stylesLogin.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+    <children>
+      <AnchorPane onMouseDragged="#handleMouseDragged" onMousePressed="#handleMousePressed" prefHeight="72.0" prefWidth="1200.0" styleClass="menuPane" stylesheets="@../styles/stylesLogin.css">
+         <children>
+              <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="42.0" layoutY="15.0" onMouseClicked="#abrirHomeSinSesion" pickOnBounds="true" preserveRatio="true" styleClass="imgLogo">
+                  <image>
+                      <Image url="@../images/TeslaLogoMain.png" />
+                  </image>
+              </ImageView>
+              <ImageView id="img_minimizarVentana" fitHeight="27.0" fitWidth="25.0" layoutX="1105.0" layoutY="24.0" onMouseClicked="#minimiarVentana" pickOnBounds="true" preserveRatio="true" styleClass="imgMinimizar">
+                  <image>
+                      <Image url="@../icons/minimizar.png" />
+                  </image>
+              </ImageView>
+              <ImageView id="img_cerrarVentana" fitHeight="27.0" fitWidth="25.0" layoutX="1144.0" layoutY="24.0" onMouseClicked="#cerrarVentana" pickOnBounds="true" preserveRatio="true" styleClass="imgCerrar">
+                  <image>
+                      <Image url="@../icons/cerrar.png" />
+                  </image>
+              </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="446.0" layoutY="121.0" style="-fx-font-weight: bold;" text="Iniciar Sesión">
+         <font>
+            <Font size="28.0" />
+         </font></Label>
+      <Label layoutX="446.0" layoutY="188.0" style="-fx-font-weight: bold;" text="Correo electrónico" textFill="#6e6e6e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textfield_campoCorreo" focusTraversable="false" layoutX="446.0" layoutY="217.0" prefHeight="40.0" prefWidth="308.0" styleClass="campoDeTexto" stylesheets="@../styles/stylesLogin.css" />
+      <Button fx:id="btn_Siguiente" layoutX="446.0" layoutY="358.0" mnemonicParsing="false" onMouseClicked="#abrirHomeConSesion" prefHeight="40.0" prefWidth="308.0" styleClass="btnSiguiente" stylesheets="@../styles/stylesLogin.css" text="Siguiente" />
+      <Label layoutX="485.0" layoutY="422.0" onMouseClicked="#webProblemasIniciarSesion" styleClass="labelEnlace" stylesheets="@../styles/stylesLogin.css" text="¿Tiene problemas para iniciar sesión?" />
+      <ImageView fitHeight="40.0" fitWidth="273.0" layoutX="465.0" layoutY="489.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/separadorPagina.png" />
+         </image>
+      </ImageView>
+      <Button id="btn_crearCuenta" layoutX="446.0" layoutY="546.0" mnemonicParsing="false" onMouseClicked="#abrirCrearCuenta" prefHeight="40.0" prefWidth="308.0" styleClass="btnCrearCuenta" stylesheets="@../styles/stylesLogin.css" text="Crear Cuenta" />
+      <Label layoutX="446.0" layoutY="266.0" style="-fx-font-weight: bold;" text="Contraseña" textFill="#6e6e6e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textfield_campoPassword" focusTraversable="false" layoutX="446.0" layoutY="295.0" prefHeight="40.0" prefWidth="308.0" styleClass="campoDeTexto" stylesheets="@../styles/stylesLogin.css" />
+      <Label fx:id="label_emailIncorrecto" layoutX="638.0" layoutY="190.0" prefHeight="18.0" prefWidth="114.0" text="Correo no registrado" textAlignment="RIGHT" textFill="RED" visible="false" />
+      <Label fx:id="label_passwordIncorrecto" layoutX="632.0" layoutY="267.0" prefHeight="18.0" prefWidth="122.0" text="Contraseña incorrecta" textAlignment="RIGHT" textFill="RED" visible="false" />
+      <Label fx:id="label_camposVacios" layoutX="446.0" layoutY="337.0" text="Rellena los campos" textFill="RED" visible="false" />
+      <ImageView fitHeight="82.0" fitWidth="35.0" layoutX="72.0" layoutY="653.0" onMouseClicked="#abrirHomeSinSesion" pickOnBounds="true" preserveRatio="true" styleClass="imgLogo">
+         <image>
+            <Image url="@../icons/volver.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
